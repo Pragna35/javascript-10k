@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods in JS</title>
+</head>
+<body>
+    <h1>String methods in Java Script</h1>
+    <script>
+        //Slice(start,end)
+
+        var fruits= "apple,banana,grapes"
+       for(i=0;i<fruits.length;i++){
+       console.log(i,'-',fruits[i])
+        }
+       console.log(fruits.slice(6,12))
+
+       //validating the password
+
+       let password ="Pragna@15"; 
+
+if(password.length < 8) { 
+
+console.log( "your password must contain atleast 8 characters"); 
+
+} else if(password.search(/[a-z]/) < 0) { 
+
+console.log("your password must contain atleast one lowerc"); 
+
+} else if(password.search(/[A-Z]/) < 0) { 
+
+console.log("your password must contain atleast one uppercase"); 
+
+} else if(password.search(/[0-9]/) < 0) { 
+
+console.log(" Password must contain at least one number"); 
+
+} else { 
+
+console.log("Success!"); 
+
+}  
+
+       
+    </script>
+</body>
+</html>
