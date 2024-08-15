@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <script>
+        var temperature = prompt("enter temperature")
+         if(temperature<0){
+            console.log('it is freezing cold')
+         } else if(temperature >= 0 && temperature <= 10){
+            console.log('it is very cold')
+         }else if(temperature >= 10 && temperature <= 20){
+            console.log('it is  cool')
+         }else if(temperature >= 20 && temperature <= 30){
+            console.log('The temperature is warm')
+         }else if(temperature >= 30 && temperature <= 40){
+            console.log('It is hot day')
+         }else{
+            console.log('it is extremely hot!')
+         }
+    </script>
+</body>
+</html>
