@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* ul{
+      display: inline;
+    } */
+  </style>
+</head>
+<body>
+  
+
+
+  <script>
+//task of 23-08-24
+
+let img = document.createElement("img")
+img.src = "./cat.jpg"
+img.width = "100"
+img.height = "100"
+img.style.float = "right"
+
+let name = document.createElement("h1")
+name.innerText = "Pragna"           //first way to write content into element
+name.style.margin = "0"
+
+// let nameText = document.createTextNode("Pragna")     //second way
+// name.appendChild(nameText)
+
+let email = document.createElement("span")
+email.innerHTML = "<b>Email</b>: pragnagirish11@gmail.com " + "<br>"
+//console.log(email.innerHTML)
+
+let number = document.createElement('span')
+number.innerHTML = "<b>Phone</b>: +91 8639256609" + "<br>"
+
+let state = document.createElement('span')
+state.innerHTML = "Hyderabad,"+"<br>"+"Telangana."
+
+let hr = document.createElement("hr")
+
+let field = document.createElement("fieldset")
+let legend = document.createElement("legend")
+legend.innerHTML = "<em>Career objectives</em>"
+legend.style.color = "orange"
+legend.style.fontSize = "20px"
+legend.style.fontWeight = "700"
+let obj = document.createElement("h2")
+obj.style.backgroundColor = "skyblue"
+let head1 = document.createTextNode("Career Objectives")
+obj.appendChild(head1)
+
+let para = document.createElement("p")
+para.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi. Sed in consequat mi. Sed pulvinar lacinia felis eu "
+
+field.append(legend,obj,para)
+let hr1 = document.createElement("hr")
+
+let hobby = document.createElement("h2")
+hobby.style.backgroundColor = "skyblue"
+hobby.innerText = "Hobbies"
+let list = document.createElement("ul")
+l1 =  document.createElement("li")
+l1.innerText = "Watching Tv"
+l2 =  document.createElement("li")
+l2.innerText = "playing with cat"
+l3 =  document.createElement("li")
+l3.innerText = "listening music"
+list.append(l1,l2,l3)
+
+let hr2 = document.createElement("hr")
+
+let skill = document.createElement("h2")
+skill.style.backgroundColor = "skyblue"
+skill.innerText = "Skills"
+let list1 = document.createElement("ul")
+li1 =  document.createElement("li")
+li1.innerText = "HTML"
+li2 =  document.createElement("li")
+li2.innerText = "CSS"
+li3 =  document.createElement("li")
+li3.innerText = "Java Script"
+list1.append(li1,li2,li3)
+
+let hr3 = document.createElement("hr")
+
+let declaration = document.createElement("h2")
+declaration.style.backgroundColor = "skyblue"
+
+let decText = document.createTextNode("Declaration")
+declaration.appendChild(decText)
+
+let para1 = document.createElement("p")
+para1.innerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ac interdum nisi. Sed in consequat mi. Sed pulvinar lacinia felis eu "
+
+document.body.append(img,name,email,number,state,hr,field,hr1,hobby,list,hr2,skill,list1,hr3,declaration,para1)
+
+
+  </script>
+</body>
+</html>
