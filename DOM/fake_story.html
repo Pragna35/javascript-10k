@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM concepts</title>
     <style>
-        table,tr,td{
+        table,tr,td,th{
             border:1px solid black;
             border-collapse: collapse;
         }
@@ -24,6 +24,9 @@
           text-decoration:none ;
          
         }
+     .h7-width{
+      padding: 0px 20px;
+     }
        
     </style>
 </head>
@@ -91,10 +94,34 @@
     }
   },]
   const table = document.createElement("table");
+      
+  let thRow = document.createElement("tr")
 
+  let h1 = document.createElement("th")
+  let h2 = document.createElement("th")
+  let h3 = document.createElement("th")
+  let h4 = document.createElement("th")
+  let h5 = document.createElement("th")
+  let h6 = document.createElement("th")
+  let h7 = document.createElement("th")
+
+  h1.innerText = "ID"
+  h2.innerText = "product"
+  h3.innerText = "price"
+  h4.innerText = "description"
+  h5.innerText = "category"
+  h6.innerText = "image"
+  h7.innerText = "button"
+  h7.className = "h7-width"  
+
+  thRow.append(h1,h2,h3,h4,h5,h6,h7)
+  //console.log(headRow)
+  table.appendChild(thRow)
+  
   for(i=0;i<data.length;i++){
   const obj = data[i]
 
+  
 
   const tr = document.createElement("tr");
   
@@ -106,7 +133,7 @@
       const td6 = document.createElement("td");
       const td7 = document.createElement("button");
       let aTag = document.createElement("a")
-      aTag.innerText = "clickme"
+      aTag.innerText = "See more"
       aTag.href = "./loading.html";
      
       td1.innerText = obj.id;
@@ -120,7 +147,7 @@
       tr.append(td1,td2,td3,td4,td5,td6,td7);
  
       table.appendChild(tr);
-      document.body.appendChild(table)
+      document.body.append(table)
  }
 
 
