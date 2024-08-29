@@ -1,0 +1,96 @@
+  <!DOCTYPE html>
+       <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    <style>
+      /* div{
+        display: inline-block;
+      } */
+     
+    </style>
+       </head>
+       <body>
+        <!-- <script>
+          let div = document.createElement("div")
+          div.style.display = "flex"
+          div.style.justifyContent = "space-between"
+          let img = document.createElement("img")
+          img.src = "./cat.jpg"
+          img.width = "100"
+          img.height = "100"
+         //img.style.float = "right"
+
+          let infoDiv = document.createElement("div")
+
+
+        let name = document.createElement("h1")
+        name.innerText = "Pragna"   
+        name.style.margin = "0"        //first way to write content into element
+
+// let nameText = document.createTextNode("Pragna")     //second way
+// name.appendChild(nameText)
+ 
+
+let email = document.createElement("span")
+email.innerHTML = "<b>Email</b>: pragnagirish11@gmail.com " + "<br>"
+
+
+let number = document.createElement('span')
+number.innerHTML = "<b>Phone</b>: +91 8639256609" + "<br>"
+
+let state = document.createElement('span')
+state.innerHTML = "Hyderabad,"+"<br>"+"Telangana."
+
+infoDiv.append(name,email,number,state)
+div.append(infoDiv,img)
+
+let hr = document.createElement("hr")
+document.body.append(div,hr)
+        </script> -->
+
+        <script>
+        
+
+          let div1 = document.createElement("div")
+         div1.style.display = "inline-block"
+         div1.style.marginLeft = "30%"
+          let head1 = document.createElement("h2")
+          head1.style.textAlign="center"
+          head1.style.color = "blue"
+          head1.innerText  = "hobbies"
+          let list1 = document.createElement("ul")
+          let li1 = document.createElement("li")
+          li1.innerText = "playing"
+      
+          let li2 = document.createElement("li")
+          li2.innerText = "reading"
+          let li3 = document.createElement("li")
+          li3.innerText = "watching tv"
+          list1.append(li1,li2,li3)
+          div1.append(head1,list1)
+
+
+          let div2 = document.createElement("div")
+           div2.style.display = "inline-block"
+           div2.style.marginLeft = "20%"
+          let head2 = document.createElement("h2")
+             head2.style.textAlign="center"
+                  head2.style.color = "blue"
+          head2.innerText  = "skills"
+          // head2.style.display="inline"
+          let list2 = document.createElement("ul")
+          let li4 = document.createElement("li")
+          li4.innerText = "playing"
+          let li5 = document.createElement("li")
+          li5.innerText = "reading"
+          let li6 = document.createElement("li")
+          li6.innerText = "watching tv"
+          list2.append(li4,li5,li6)
+          div2.append(head2,list2)
+          
+          document.body.append(div1,div2)
+        </script>
+       </body>
+       </html>

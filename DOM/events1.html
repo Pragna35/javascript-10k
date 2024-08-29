@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events practice</title>
+    <style>
+        .sub-img{
+          
+            display: block;
+            width: 60px;
+            margin: 20px;
+            border: 5px double black;
+            border-radius: 15px;
+        }
+        #full-img{
+            width: 400px;
+            
+            box-shadow: 0px 0px 5px  rgb(116, 112, 112);
+        }
+      #main{
+        display: flex; 
+      }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div>
+            <img class="sub-img" src="https://m.media-amazon.com/images/I/71kE75JMKjL._SY741_.jpg" alt="shirt" onmouseover="imgHover()" onmouseout="removeMouse()">
+            <img class="sub-img" src="https://m.media-amazon.com/images/I/71V5gEc8YVL._SY741_.jpg" alt="shirt" onmouseover="imgHover1()" onmouseout="removeMouse()">
+            <img class="sub-img" src="https://m.media-amazon.com/images/I/71cc5ovpHqL._SY741_.jpg" alt="shirt" onmouseover="imgHover2()" onmouseout="removeMouse()">
+            <img class="sub-img" src="https://m.media-amazon.com/images/I/71gxzNP0V3L._SY741_.jpg" alt="shirt" onmouseover="imgHover3()" onmouseout="removeMouse()">
+        </div>
+        <img id="full-img" src="https://m.media-amazon.com/images/I/71kE75JMKjL._SY741_.jpg" alt="shirt">
+    </div>
+
+
+    <script>
+        function imgHover(){
+            smallImg = document.getElementsByClassName("sub-img")
+            smallImg[0].style.border = "5px double gray"
+             smallImg[0].style.transform = "scale(1.1)"
+             img = document.getElementById("full-img")
+              img.setAttribute("src","https://m.media-amazon.com/images/I/71kE75JMKjL._SY741_.jpg")
+        }
+
+
+        function imgHover1(){
+         smallImg = document.getElementsByClassName("sub-img")
+            smallImg[1].style.border = "5px double burlywood"
+            smallImg[1].style.transform = "scale(1.1)"
+ img = document.getElementById("full-img")
+ img.setAttribute("src","https://m.media-amazon.com/images/I/71V5gEc8YVL._SY741_.jpg")
+        }
+
+
+        function imgHover2(){
+          smallImg = document.getElementsByClassName("sub-img")
+            smallImg[2].style.border = "5px double darkred"
+            smallImg[2].style.transform = "scale(1.1)"
+ img = document.getElementById("full-img")
+ img.setAttribute("src","https://m.media-amazon.com/images/I/71cc5ovpHqL._SY741_.jpg")
+        }
+
+
+        function imgHover3(){
+          smallImg = document.getElementsByClassName("sub-img")
+            smallImg[3].style.border = "5px double black"
+            smallImg[3].style.transform = "scale(1.1)"
+ img = document.getElementById("full-img")
+ img.setAttribute("src","https://m.media-amazon.com/images/I/71gxzNP0V3L._SY741_.jpg")
+        }
+
+
+
+        function removeMouse(){
+            smallImg = document.getElementsByClassName("sub-img")
+          for(i=0;i<smallImg.length;i++){
+            smallImg[i].style.transform = "scale(1)"
+           smallImg[i].style.borderColor = "black"
+          }
+           
+        }
+    </script>
+</body>
+</html>

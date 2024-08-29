@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Events using addEventListener() method</title>
+        <style>
+            button{
+                /* display: block; */
+                margin: 50px 20px;
+                padding:10px 15px;
+                border-radius: 15px;
+            }
+            img{
+                margin-left: 100px;
+                width: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <h1>
+            Pragna
+        </h1> -->
+
+
+          <script>
+            
+// h1get = document.getElementsByTagName("h1")
+
+// let btncre = document.createElement("button")
+// btncre.innerText = "click me"
+
+//calling function inside the addEventListener("eventlistener",function)
+
+// btncre.addEventListener("click",function(){
+//     h1get[0].style.color = "red"
+// })
+// document.body.append(btncre)
+
+         
+
+//task of 27-08-24 --- using addEventListener() rotating an image
+
+let  img = document.createElement("img")
+        img.src = "cat.jpg"
+        
+        let btndiv = document.createElement("div")
+
+          let btn1 = document.createElement("button"); 
+          btn1.innerText = "0 degrees" 
+          btn1.addEventListener("mouseover",rotate);
+
+          let btn2 = document.createElement("button");
+          btn2.innerText = "45 degrees"
+          btn2.addEventListener("mouseover",rotate45);
+
+          let btn3 = document.createElement("button");
+          btn3.innerText = "100 degrees"
+          btn3.addEventListener("mouseover",rotate100)
+
+          let btn4 = document.createElement("button");
+          btn4.innerText = "150 degrees"
+          btn4.addEventListener("mouseover",rotate150)
+
+          let btn5 = document.createElement("button");
+          btn5.innerText = "360 degrees"
+          btn5.addEventListener("mouseover",rotate360)
+          
+          btndiv.append(btn1,btn2,btn3,btn4,btn5)   //adding buttons to the div
+       
+          document.body.append(img,btndiv)       //addding img and btndiv to the body
+
+          function rotate(){
+            img.style.transform = "rotateY(0deg)"
+            img.style.transition = "2s"
+          }
+          function rotate45(){
+            img.style.transform = "rotateY(45deg)"
+            img.style.transition = "2s"
+          }
+          function rotate100(){
+            img.style.transform = "rotateY(100deg)"
+            img.style.transition = "2s"
+          }
+          function rotate150(){
+            img.style.transform = "rotateY(150deg)"
+          }
+          function rotate360(){
+            img.style.transform = "rotateY(360deg)"
+            img.style.transition = "2s"
+          }
+          </script>
+    </body>
+</html>

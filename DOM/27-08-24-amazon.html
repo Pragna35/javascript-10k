@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon product hover effect using addEventListener()</title>
+    <style>
+        img{
+            display: block;
+            width: 120px;
+            margin:10px 0px ;
+            border: 5px double lightcoral;
+            border-radius: 15px;
+        }
+        #main{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #bigimage{
+            width: 900px;
+            height: 650px;
+           border: 2px solid palevioletred;
+        }
+    </style>
+   
+</head>
+<body>
+
+    <script>
+          let  mainDiv = document.createElement("div")
+          mainDiv.setAttribute("id","main")
+
+       let  imgDiv = document.createElement("div")
+
+       //first small img
+       let img1 = document.createElement("img")    
+       img1.src = "https://m.media-amazon.com/images/I/613ls1KV-HL._SX522_.jpg"
+       img1.addEventListener("mouseover",hover)
+       img1.addEventListener("mouseout", mouseOut)
+
+       //second
+       let img2 = document.createElement("img")
+       img2.src = "https://m.media-amazon.com/images/I/61qGo5n+4jL._SX522_.jpg"
+       img2.addEventListener("mouseover",hover1)
+       img2.addEventListener("mouseout", mouseOut1)
+
+       //third
+       let img3 = document.createElement("img")
+       img3.src = "https://m.media-amazon.com/images/I/71GhhnlFRIL._SX522_.jpg"
+       img3.addEventListener("mouseover",hover2)
+       img3.addEventListener("mouseout", mouseOut2)
+
+       //fourth
+       let img4 = document.createElement("img")
+       img4.src = "https://m.media-amazon.com/images/I/61XoMFGie2L._SX522_.jpg"
+       img4.addEventListener("mouseover",hover3)
+       img4.addEventListener("mouseout", mouseOut3)
+
+       //fifth image
+       let img5 = document.createElement("img")
+       img5.src = "https://m.media-amazon.com/images/I/61cK+camIsL._SX522_.jpg"
+       img5.addEventListener("mouseover",hover4)
+       img5.addEventListener("mouseout", mouseOut4)
+
+
+       imgDiv.append(img1,img2,img3,img4,img5)
+
+       //display image when we hover on small images
+       bigImg = document.createElement("img")
+       bigImg.src = ""               //first we are not providing any image in the big image when we hover on small imgs then they will disply in this
+
+
+       bigImg.setAttribute("id","bigimage")
+       mainDiv.append(imgDiv,bigImg)
+       document.body.append(mainDiv)
+
+
+       function hover(){
+        bigImg.src = "https://m.media-amazon.com/images/I/613ls1KV-HL._SX522_.jpg"
+        img1.style.transform = "scale(1.1)"
+       }
+       function hover1(){
+        bigImg.src = "https://m.media-amazon.com/images/I/61qGo5n+4jL._SX522_.jpg"
+        img2.style.transform = "scale(1.1)"
+       }
+       function hover2(){
+        bigImg.src = "https://m.media-amazon.com/images/I/71GhhnlFRIL._SX522_.jpg"
+        img3.style.transform = "scale(1.1)"
+       }
+       function hover3(){
+        bigImg.src = "https://m.media-amazon.com/images/I/61XoMFGie2L._SX522_.jpg"
+        img4.style.transform = "scale(1.1)"
+       }
+       function hover4(){
+        bigImg.src = "https://m.media-amazon.com/images/I/61cK+camIsL._SX522_.jpg"
+        img5.style.transform = "scale(1.1)"
+       }
+
+
+       function mouseOut(){
+        img1.style.transform = "scale(1)"
+       }
+       function mouseOut1(){
+        img2.style.transform = "scale(1)"
+       }
+       function mouseOut2(){
+        img3.style.transform = "scale(1)"
+       }
+       function mouseOut3(){
+        img4.style.transform = "scale(1)"
+       }
+       function mouseOut4(){
+        img5.style.transform = "scale(1)"
+       }
+    </script>
+</body>
+</html>

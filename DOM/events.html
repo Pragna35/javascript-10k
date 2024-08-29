@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasks on Events ----  26-08-24 </title>
+</head>
+<body>
+    <button onclick="rotateY(0)">rotate 0</button><br><br>
+    <button onclick="rotateY(45)">rotate 45</button><br><br>
+    <button onclick="rotateY(90)" >rotate 90</button><br><br>
+    <button onclick="rotateY(180)">rotate 180</button><br><br>
+    <button onclick="rotateY(270)">rotate 270</button><br><br>
+    <button onclick="rotateY(360)">rotate 360</button><br><br>
+    <img onmouseover="hover()" onmouseleave="leave()" src="https://w7.pngwing.com/pngs/840/886/png-transparent-masha-of-masha-and-the-bear-masha-and-the-bear-kids-games-animated-film-masha-and-the-bear-house-cleaning-games-for-girls-bear-purple-child-animals-thumbnail.png" alt="sample img">
+    <script>
+       
+        function rotateY(degrees){
+            let masha = document.getElementsByTagName("img")
+           masha[0].style.transform = "rotate("+degrees+"deg)"
+
+        }
+
+
+        //image rotating on x-axis
+
+
+        // function rotateX(degrees){
+        //     let mashax = document.getElementsByTagName("img")
+        //     mashax[0].style.transform = "rotateX("+degrees+"deg)";
+        //     mashax[0].style.transition = "3s"
+        // }
+
+        // //image rotating on y-axis
+
+        
+        // function rotateY(degrees){
+        //     let mashay = document.getElementsByTagName("img")
+        //     mashay[0].style.transform = "rotateY("+degrees+"deg)";
+        //     mashay[0].style.transition = "3s"
+        // }
+
+        // function hover(){
+        //     let m = document.getElementsByTagName("img")
+        //     m[0].style.transform = "scale(1.2)"
+        //     m[0].style.transition = "2s"
+        // }
+
+        // function leave(){
+        //     let ma = document.getElementsByTagName("img")
+        //     ma[0].style.transform = "scale(1)"
+        //     ma[0].style.transition = "2s"
+        // }
+    </script>
+</body>
+</html>

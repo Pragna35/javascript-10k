@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form creation and pushing user inputs into array of objects</title>
+    <style>
+        input{
+            display: block;
+            margin: 20px 0px;
+            padding: 10px 25px 10px 8px;
+            border-radius: 10px;
+        }
+        input::placeholder{
+            font-size: 15px;
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(195, 189, 189);
+        }
+      input:focus{
+        outline: none;
+      }
+        #btn{
+            font-size: 15px;
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>JS popup alerts</h1>
+    <button>take permission</button>
+    <script>
+            var btn = document.getElementsByTagName("button")
+
+               btn[0].addEventListener("click",submission)
+
+              
+
+
+               function submission(){
+               
+            
+            
+
+            let confirmation = confirm("do u want to go to log in page")
+            if(confirmation){
+                window.location.assign("login.html")
+            }
+        
+
+           
+               }
+
+               
+               
+    </script>
+  
+</body>
+</html>

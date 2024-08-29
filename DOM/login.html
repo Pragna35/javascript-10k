@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #close{
+        margin: 20px;
+        padding: 12px;
+        font-size: 20px;
+    }
+</style>
+</head>
+<body>
+    <form style="background-color:antiquewhite;">
+        <fieldset>
+            <center>
+                <h1>Login</h1>
+                <label for="uname">Username</label>
+                <input type="text" id="uname">
+                <br><br>
+                <label for="pass">Password</label>
+                <input type="password" id="pass">
+                <br><br>
+
+                <a href="">forget password</a>
+                <br><br>
+
+                <button>login</button><br>
+                <pre>don't you have an account.<a href="">create an account</a></pre>
+            </center>
+        </fieldset>
+    </form>
+
+    <button id="close"> To Close the tab..... click me</button>  
+
+    <script>
+        let close_btn = document.getElementById("close")
+        close_btn.addEventListener("click",()=> {
+            window.close();      //it works only for 28-8-24-form html file
+        })
+    </script>
+</body>
+</html>

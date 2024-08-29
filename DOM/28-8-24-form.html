@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form creation and pushing user inputs into array of objects</title>
+    <style>
+        input{
+            display: block;
+            margin: 20px 0px;
+            padding: 10px 25px 10px 8px;
+            border-radius: 10px;
+        }
+        input::placeholder{
+            font-size: 15px;
+            font-style: italic;
+            font-weight: bold;
+            color: rgb(195, 189, 189);
+        }
+      input:focus{
+        outline: none;
+      }
+        #btn{
+            font-size: 15px;
+            font-style: italic;
+            font-weight: bold;
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <h1>Resgister form</h1>
+    <form action="">
+        <input type="text" placeholder="Username" id="user">
+        <input type="password" placeholder="Password" id="pass">
+        <input type="number" placeholder="Number" id="num">
+        <input type="button" value="Submit" id="btn">
+
+    </form>
+    <script>
+
+    //local storage  //session storage
+
+    window.localStorage.setItem("user","pragna")  //permanent storage untill we delete it won't delete
+
+   // window.sessionStorage.setItem("user","pragna")  //temporary storage
+
+
+             var submit = document.getElementById("btn")
+
+               submit.addEventListener("click",submission)
+
+               array = []
+
+
+               function submission(){
+               
+                var name = document.getElementById("user")
+             var password = document.getElementById("pass")
+             var number = document.getElementById("num")
+
+             obj = {
+                username: name.value,
+                password: password.value,
+                mobile: number.value
+             }
+
+            // console.log(obj)
+             array.push(obj)
+             console.log(array)
+
+             
+             window.open("login.html")
+
+            // window.open("login.html","_self")  //to open login page with in the same page when we used self
+
+
+           // window.location.assign("login.html")  //it acts as a self
+               }
+
+               
+               
+    </script>
+  
+</body>
+</html>
