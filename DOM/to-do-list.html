@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <style>
+        #list-container{
+            /* border: 2px solid black; */
+            width: 50%;
+            margin-left:auto ;
+            margin-right: auto;
+           
+        }
+        #btn{
+            background-color: green;
+            border-radius: 12px;
+            color: white;
+            padding:9px;
+            font-size: 20px;
+        }
+        h1{
+            background-color: goldenrod;
+            text-align: center;
+        }
+      
+        #input-id{
+            width: 40%;
+            outline:none ;
+            padding:12px;
+            font-size: 20px;
+            border-radius: 12px;
+            margin-left: 60px;
+        }
+        li{
+            list-style-type: none;
+             margin: 12px;
+            padding: 2px;
+            box-shadow: 0px 0px 2px 3px darkgrey;
+            font-size: 20px;
+        }
+        .delete-btn{
+            background-color: red;
+            margin: 12px;
+            padding: 2px 16px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+        .edit-btn{
+            background-color: skyblue;
+            margin: 12px;
+            padding: 2px 16px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>To-do List</h1>
+    <div id="list-container">
+    
+    <form action="">
+    <input id="input-id" type="text" placeholder="Enter the  Task ....">
+    <input  id="btn" type="button" value="add Task" >
+</form>
+<ul id="task-list"></ul>
+</div>
+    <script>
+        const container =document.getElementById("list-container")
+        const btn = document.getElementById("btn")
+        const inputField = document.getElementById("input-id") 
+        const taskList = document.getElementById("task-list")
+        
+        
+        btn.addEventListener("click",function(){
+            if(inputField.value == ""){
+                alert(" please enter the Task")
+            }else{
+                 // new task
+         const taskText = inputField.value
+         const   newItem = document.createElement("li")
+         newItem.innerText = taskText;
+      
+
+
+         //delete button
+         const deleteButton = document.createElement("button")
+         let buttonText = document.createTextNode("Delete")
+         deleteButton.appendChild(buttonText)
+         deleteButton.classList.add('delete-btn')
+         deleteButton.addEventListener("click",function(){
+            newItem.remove()
+         })
+
+        
+
+         //edit button
+         const editButton = document.createElement("button")
+         editButton.innerText = "Edit"
+         editButton.classList.add('edit-btn')
+         editButton.addEventListener("click",function(){
+       alert("do u really want to edit the task")
+            const updateText = prompt("edit the previous Task"+taskText)
+            newItem.firstChild.textContent = updateText;
+         })
+
+        
+
+
+
+        newItem.append(editButton,deleteButton)
+      taskList.appendChild(newItem)
+      container.append(taskList)
+
+     inputField.value = ""
+        }
+    })
+            
+
+           
+        
+        
+        
+        
+    </script>
+</body>
+</html>
+
+
+// <!-- 
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>To-Do List</title>
+ 
+//     <style>
+//         h1{
+//             text-align: center;
+//             background-color: orange;
+//         }
+//         #btn {
+//             background-color: green;
+//             border-radius: 10px;
+//             color: white;
+//             padding: 5px 10px;
+//             border: none;
+//             cursor: pointer;
+//             padding: 11px;
+//         }
+//         #input-id{
+//            width: 30%;
+//            padding: 10px;
+//            font-size: 16px;
+//         }
+//         #input-id:focus{
+//             outline: none;
+//             box-shadow: 0px 0px 2px 3px lightblue ;
+//         }
+//         #task-list {
+//             list-style-type: none;
+//             padding: 0;
+//         }
+//         .task-item {
+//             margin-bottom: 10px;
+//             font-size: 20px;
+//         }
+//         .edit-btn, .delete-btn {
+//             margin-left: 10px;
+//             padding: 5px;
+//             cursor: pointer;
+//         }
+//         .edit-btn {
+//             background-color: skyblue;
+//             color: white;
+//         }
+//         .delete-btn {
+//             background-color: red;
+//             color: white;
+//         }
+//     </style>
+// </head>
+// <body>
+//     <h1>To-do List</h1>
+   
+//     <form action="">
+//         <input id="input-id" type="text" placeholder="Enter the Task ....">
+//         <input id="btn" type="button" value="Add Task">
+//     </form>
+//     <ul id="task-list"></ul>
+
+//     <script>
+//         const btn = document.getElementById("btn");
+//         const input = document.getElementById("input-id");
+//         const taskList = document.getElementById("task-list");
+
+//         btn.addEventListener("click", function() {
+//             if(input.value == ""){
+//                 alert("entr the Task")
+//             }
+//             const taskText = input.value;
+           
+
+//             const newItem = document.createElement("li");
+//             newItem.classList.add("task-item");
+//             newItem.innerText = taskText;
+
+//             // Delete button
+//             const deleteButton = document.createElement("button");
+//             deleteButton.innerText = "Delete";
+//             deleteButton.classList.add("delete-btn");
+//             deleteButton.addEventListener("click", function() {
+//                 taskList.removeChild(newItem);
+//             });
+
+//             // Edit button
+//             const editButton = document.createElement("button");
+//             editButton.innerText = "Edit";
+//             editButton.classList.add("edit-btn");
+//             editButton.addEventListener("click", function() {
+//                 const updatedText = prompt("edit the previous task:", newItem.innerText);
+//                 if (updatedText !== null) {
+//                     newItem.firstChild.textContent = updatedText;
+//                 }
+//             });
+
+//             newItem.append(editButton,deleteButton);
+           
+//             taskList.appendChild(newItem);
+
+//             // Clear input field
+//             input.value = "";
+//         });
+//     </script>
+// </body>
+// </html> -->
