@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form task</title>
+    <!-- font awesome cdn link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        input{
+            display: block;
+            margin: 25px;
+            padding:16px 50px;   
+            border-radius: 12px;
+            border: none;
+            width: 30%;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-style: italic;
+        }
+        input:focus{
+            outline: none;
+            box-shadow: 0px 0px 10px rgb(134, 95, 184);
+        }
+        input::placeholder{
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 600;
+            color:rgb(192, 180, 180);
+            
+        }
+        #card{
+       /* color: blue; */
+            width: 300px;
+            height: 250px;
+            padding: 40px 20px 0px;
+            margin-top: 20px;
+           box-shadow: 0px 0px 12px rgb(114, 63, 180);
+           border-radius: 12px;
+           text-align:left;
+           font-size: 1.2rem;
+           font-weight: 700;
+        }
+       fieldset{
+       
+        border: 4px solid darkslateblue;
+        background-color: lavender;
+       }
+       legend{
+        font-style: italic;
+        font-weight: 700;
+        font-size: x-large;
+        color: darkslateblue;
+
+       }
+       #btn{
+        background-color: darkslateblue;
+        color: white;
+            padding:1% 16%;   
+            font-size: 1rem;
+            font-style: italic;
+            font-weight: 600;
+           margin-bottom: 12px;
+           margin-left: 2%;
+           border-radius: 26px;
+       }
+      #close-btn{
+        width: 30px;
+        border: 1px solid; 
+        border-radius: 20%;
+        margin-left: 80%;
+        background-color: rgb(121, 109, 197);
+         text-align: center;
+      }
+     
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>User Data Form</legend>
+     
+    <form action="">
+        <input id="name"  type="text" placeholder="username">
+        <input id="pass" type="password" placeholder="password">
+        <input id="confirm-pass" type="password" placeholder="confirm password">
+        <input id="mail" type="email" placeholder="Email">
+        <input id="number" type="number" placeholder="mobile">
+        <button id="btn">Submit</button>
+    </form>
+    
+</fieldset>
+    <script>
+    
+       let input1 = document.getElementById("name")
+       let input2 = document.getElementById("pass")
+       let input3 = document.getElementById("confirm-pass")
+       let input4 = document.getElementById("mail")
+       let input5 = document.getElementById("number")
+        let btn = document.getElementById("btn")
+
+       //creating close button
+        let closeBtn = document.createElement("div")
+        closeBtn.innerHTML = `<i class="fa-solid fa-xmark"></i>`
+        closeBtn.setAttribute("id","close-btn")
+
+
+        btn.addEventListener("click",function(e){
+          e.preventDefault()
+ 
+          if(input1.value == "" || input2.value == "" || input3.value == "" || input4.value == "" || input5.value == ""){
+            alert("please fill all input fields")
+          }else
+         {
+            let card = document.createElement("div")
+            card.setAttribute("id","card")
+            card.innerHTML = "Username: "+input1.value + "<br>"+"<br>"+"Password: "+ input2.value+"<br>"+"<br>"+"Confirm-Password: " +input3.value+"<br>"+"<br>"+"Email: "+ input4.value+"<br>"+"<br>"+"Mobile: "+ input5.value
+            card.appendChild(closeBtn)
+
+            closeBtn.addEventListener("click",()=> {
+                card.remove()
+            })
+            document.body.append(card)
+         }
+          
+ input1.value =""
+ input2.value =""
+ input3.value =""
+ input4.value =""
+ input5.value =""
+        })
+
+
+    </script>
+</body>
+</html>
