@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getting products</title>
+    <style>
+
+        img{
+            width: 20%;
+            margin-left: 40%;
+        }
+        
+        #desc{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="image" src="" alt="">
+    <h2 id="id"></h2>
+    <h2 id="title"></h2>
+    <h3 id="desc" ></h3>
+    <h2 id="category"></h2>
+    <h2 id="price" ></h2>
+
+
+    <script>
+        let a = localStorage.getItem("product")  //we get project in the form of string
+        var a1 = JSON.parse(a);             //we are converting string to object using json.parse()
+        console.log(a1)
+
+       
+        let image = document.getElementById("image")
+        image.src = a1["image"]
+       
+
+        let id = document.getElementById("id")
+        id.innerHTML = `<i style="color:blue">product-id : </i>` +  a1["id"]
+
+        let title = document.getElementById("title")
+        title.innerHTML = `<i style="color:blue">Title : </i>`+ a1["title"]
+
+        let desc = document.getElementById("desc")
+        desc.innerHTML = `<i style="font-size:1.5rem;color:blue">Description : </i>`+ a1["description"]
+
+        let category = document.getElementById("category")
+        category.innerHTML = `<i style="color:blue">Category : </i>`  + a1["category"]
+
+        let price = document.getElementById("price")
+        price.innerHTML = `<i style="color:blue">Price : </i>`+ a1["price"]
+
+    </script>
+</body>
+</html>
