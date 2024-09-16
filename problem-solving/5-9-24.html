@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-9-24 task </title>
+</head>
+<body>
+    <h1>5-9-24 task</h1>
+    <script>
+
+        rows = 5
+        for(i=1;i<=2*rows-1;i++){
+            s=""
+            space = (i<=rows)?rows-i:i-rows;
+            cols = (i<=rows)?i:2*rows-i;
+            for(sp=1;sp<=space;sp++){
+                s=s+" "
+            }
+            for(j=1;j<=cols;j++){
+                if(j==1 || j ==i || j== 2*rows-i){
+                    s=s+"*"+" "
+                }
+                else{
+                    s=s+" "+" "
+                }
+            }
+            console.log(s)
+        }
+    </script>
+</body>
+</html>

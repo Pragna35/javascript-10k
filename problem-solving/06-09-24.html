@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6-9-24 task</title>
+</head>
+<body>
+    <h1>6-9-24 task</h1>
+    <script>
+        // 4 
+        // 6 8 
+        // 9 10 12 
+        // 14 15 16 18
+
+
+rows = 4
+num = 2
+for(i=1;i<=rows;i++){
+    s=""
+    for(j=1;j<=i;j++){
+        limit=1
+        while(limit<=1){
+            fact = 0;
+            for(k=2;k<num;k++){
+                if(num%k == 0){
+                    fact++;
+                    break
+                }
+            }
+            if(fact !== 0){
+            s = s+num+" "
+            limit ++
+            }
+            num++
+        }
+    }
+    console.log(s)
+}
+
+
+2. 
+//       a
+//      a b
+//     a   c
+//    a     d
+//     a   c
+//      a b
+//       a
+
+let rows = 4
+for(i=1;i<=2*rows-1;i++){
+    s=""
+    code =97
+    space = (i<=rows)?rows-i:i-rows;
+    cols=(i<=rows)?i:2*rows-i;
+    for(sp=1;sp<=space;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=rows;j++){
+        if(j==1|| j==i || j == 2*rows-i){
+            s=s+String.fromCharCode(code)+" "
+            code++
+        }else{
+            s=s+" "+" "
+            code++
+        }
+    }
+    console.log(s)
+}
+
+    </script>
+</body>
+</html>

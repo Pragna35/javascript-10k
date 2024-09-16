@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09-09-24 task</title>
+</head>
+<body>
+    <h1>09-09-24 task</h1>
+    <script>
+
+
+//         * 
+//       * * 
+//     * * * 
+//   * * * * 
+// * * * * * 
+//   * * * * 
+//     * * * 
+//       * * 
+//         * 
+        
+        let rows = 5
+        for(i=1;i<=2*rows-1;i++){
+            s=""
+            space= (i<=rows)?rows-i:i-rows;
+            cols = (i<=rows)?i:2*rows-i;
+            for(sp=1;sp<=space;sp++){
+                s=s+" "+" "
+            }
+            for(j=1;j<=cols;j++){
+                s=s+"*"+" "
+            }
+            console.log(s);
+            
+        }
+
+
+ //      1 
+//       1 2 1 
+//     1 2 3 2 1 
+//   1 2 3 4 3 2 1 
+// 1 2 3 4 5 4 3 2 1 
+
+
+ rows=5
+for(i=1;i<=rows;i++){
+    s=""
+    for(sp=1;sp<=rows-i;sp++){
+        s=s+" "+" "
+    }
+    for(j=1;j<=i;j++){
+        s=s+j+" "
+    }
+    for(j=i-1;j>=1;j--){
+        s=s+j+" "
+    }
+    console.log(s)
+}
+    </script>
+</body>
+</html>
