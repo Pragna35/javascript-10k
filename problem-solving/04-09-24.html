@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04-09-24 tasks</title>
+</head>
+<body>
+    <h1>04-09-24 tasks</h1>
+    <script>
+        // write the code to print these patterns
+
+
+// * * * * *
+//  * * * *
+//   * * *
+//    * *
+//     *
+//    * *
+//   * * *
+//  * * * *
+// * * * * *
+
+rows = 5
+for(i=rows;i>=1;i--){
+    s=""
+    for(sp=rows-i;sp>=1;sp--){
+        s+= " "
+    }
+    for(j=i;j>=1;j--){
+        s+="*"+" "
+    }
+    console.log(s)
+}
+for(i=2;i<=rows;i++){
+    s=""
+    for(sp=1;sp<=rows-i;sp++){
+        s=s+" "
+    }
+    for(j=1;j<=i;j++){
+        s=s+"*"+" "
+    }
+    console.log(s)
+}
+
+
+
+
+// *      
+// * *      
+// * * *      
+// * * * *      
+// * * * * *      
+// * * * *      
+// * * *      
+// * *      
+// *
+
+rows=5
+for(i=1;i<=rows;i++){
+    s=""
+    for(j=1;j<=i;j++){
+        s=s+"*"+" "
+    }
+    console.log(s)
+}
+for(i=rows-1;i>=1;i--){
+    s=""
+    for(j=i;j>=1;j--){
+         s=s+"*"+" "
+    }
+   console.log(s)
+}
+
+
+
+    </script>
+</body>
+</html>

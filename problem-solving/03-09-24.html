@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-09-24 tasks</title>
+</head>
+<body>
+    <h1>03-09-24 tasks</h1>
+    <script>
+        // let str="abcdefghijklmnopqrstuvwxyz"///["abcd","efgh","ijkl"........"yz"]
+
+
+
+
+// * * * * *
+//  *      *
+//   *    *
+//    *  *
+//      *
+
+ rows = 5
+ for(i=rows;i>=1;i--){
+   str=""
+   for(sp=rows-i;sp>=1;sp--){
+         str+= " "
+     }
+   for(j=i;j>=1;j--){
+       if(i==rows|| j==1||i==j){   
+              str+="*"+" "
+         }else{
+            str=str+"  "
+        }
+      
+   }
+     console.log(str)
+ }
+
+
+
+
+// * * * * *
+//   *      * 
+//     *    *
+//       *  *
+//          * 
+
+rows=5
+for(i=1;i<=rows;i++){
+    s=""
+    for(j=1;j<=rows;j++){
+        if(i==1||j==rows||i==j){
+            s=s+"*"+" "
+        }else{
+            s=s+" "+" "
+        }
+    }
+    console.log(s)
+}
+
+
+
+
+
+    </script>
+</body>
+</html>

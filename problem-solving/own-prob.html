@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own problems using nested if and ternary</title>
+</head>
+<body>
+    <h1>Own Problems Using ternary and nested if </h1>
+    <script>
+        //create a problem on going to abroad (what are the conditions)
+
+
+ passport =true
+visa = false
+forex_card = true
+covid_certificate =true
+
+
+passport && visa && forex_card && covid_certificate? 
+console.log("you are eligible to go to abroad")
+:passport && !visa 
+?console.log("Do apply for visa")
+:!passport && visa?
+console.log(" Do apply for passport")
+:!forex_card && covid_certificate && passport && visa
+?console.log("Do apply for forex card")
+:forex_card && !covid_certificate && passport && visa
+? console.log("submit your covid certificate")
+:console.log("check whether you have all required cards and certificates")
+
+
+
+ 
+//finding whether the username and password are valid or not using Nested ternary condition
+
+user = "user"
+password = "password"
+ is_valid = user == "user" && password == "password"
+            ? console.log("valid credentials..you can log in")
+            :user != "user" && password == "password"
+            ?console.log("enter valid username") 
+            : user == "user" && password != "password"
+             ? console.log("enter valid password")
+             :console.log("invalid credentials")
+
+          //  console.log(is_valid) //----- we get undefined for this log ===> because we have consoling the consoles which are present in ternary operator
+
+
+         //we are not consoling the true statement with in the ternary operation. Instead we are storing the result in is_valid variable and consoling it at last line.
+            user = "user"
+            password = "password"
+            is_valid = user == "user" && password == "password"
+            ? "valid credentials..you can log in"
+            :user != "user" && password == "password"
+            ?"enter valid username"
+            : user == "user" && password != "password"
+             ? "enter valid password"
+             :"invalid credentials"
+            console.log(is_valid) //----- Here  we get  the correct result
+
+
+
+        //to get a loan what are the requirements
+
+        
+        salary=prompt("Enter your salary")
+        age = prompt("Enter your age")
+        cibil_score = prompt("Enter your cibil")
+
+        if(cibil_score>=750){
+            if(salary >= 35000 && age > 18  && age < 65){
+                console.log("loan is approved")
+            }else if(salary <=35000 && age > 18  && age < 65){
+                console.log("do not have sufficient salary for approval of loan")
+            }else{
+                console.log("you are not eligible for loan")
+            }
+        }else if(cibil_score==0 && cibil_score<750){
+            console.log("sorry...,increase your cibil")
+        }else{
+            console.log("check your salary, cibil_score and age once")
+        }
+
+
+        //to get an admission in school what are the requirements
+
+        tc= prompt("do you have previous class TC ?")
+    report_card = prompt("do you have report card of your last class?")
+    pass = 1 //1 is a truthy value
+
+
+if(tc == "yes" && report_card == "yes"){
+    if(pass){
+        console.log("you are eligible for this application ")
+    }else if(!pass){
+        console.log("You must pass the previous class")
+    }else{
+        console.log("so bad...you are failed ")
+    }
+}else if(report_card == "no" && tc == "no"){
+console.log("you must have report card and tc")
+}else if(report_card == "yes" && tc == "no"){
+    console.log("you must have tc")
+    
+}else if(report_card == "no" && tc == "yes"){
+    console.log("you must have report card")
+}
+    
+    </script>
+</body>
+</html>

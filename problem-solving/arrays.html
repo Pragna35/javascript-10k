@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem solving class daily tasks on arrays</title>
+</head>
+<body>
+    <h1>Problems on arrays</h1>
+    <script>
+        //finding middle valus from a given array (even length array)
+
+
+        let array = [1,2,4,6]
+        let mid = Math.floor(array.length/2)
+        console.log(array[mid-1],array[mid])
+
+        //finding middle values of nested arrays   --- 26-08-24
+
+        let a = [[12,4,1,5],[1,2,3],[5,6,7]]
+ 
+ 
+ for(i=0;i<a.length;i++){
+     //console.log(a[i])
+        if(a[i].length%2 == 0){
+              mid = Math.floor(a[i].length/2)
+              console.log(a[i][mid-1],a[i][mid])
+        }else {
+             mid = Math.floor(a[i].length/2)
+             console.log(a[i][mid])
+        }
+        
+     }
+
+     //finding unique and duplicates arrays from nested array
+
+     let arr = [[2,3,4,2],[5,6,7,8],[2,3,3]]
+    
+            dup = [],unq = []
+        for(i of arr){
+            //console.log(i)
+            emp = []
+            for(j=0;j<i.length;j++){
+                if(!emp.includes(i[j])){
+                    emp.push(i[j])
+                }
+            }
+            //console.log(emp)
+           if(emp.length !== i.length){
+               dup.push(i)
+           }else{
+               unq.push(i)
+           }
+           
+        }
+         console.log("unique elements array:",unq)
+        console.log("duplicate elements array:",dup)
+
+     //finding the duplicate elment arrays count in a given nested array  ---- 26-08-24
+
+     let ar = [[2,3,4,2],[5,9,,7,8],[2,3,3],[1,2,1,2]]
+    count = 0
+        
+        for(i of ar){
+            //console.log(i)
+            emp = []
+            for(j=0;j<i.length;j++){
+                if(!emp.includes(i[j])){
+                    emp.push(i[j])
+                }
+            }
+            //console.log(emp)
+           if(emp.length !== i.length){
+               count ++
+               
+           }
+           
+        }
+        console.log("number of dupliciate elemenet arrays in given array:",count)
+
+
+
+    </script>
+</body>
+</html>

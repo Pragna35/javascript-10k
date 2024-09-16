@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-8-24 tasks</title>
+</head>
+<body>
+    <h1>10-8-24 tasks</h1>
+    <script>
+    // 1. Write code to check whether the given two numbers have same number of factors
+    // eg: 12, 18 o/p: true   ( total factors of 12=6(1,2,3,4,6,12)   total factors of 18 = 6(1,2,3,6,9,18))
+
+
+
+    let n1 = 14
+let n2 = 18
+let c1 = 0
+let c2 = 0
+for(i=1;i<=n1;i++){
+    if(n1%i == 0){
+        c1++
+    }
+}
+console.log(c1)
+for(i=1;i<=n2;i++){
+    if(n2%i == 0){
+        c2++
+    }
+}
+console.log(c2)
+if(c1==c2){
+    console.log("both numbers have equal no. of factors")
+}else{
+    console.log("doesn't have equal no. of factors")
+}
+
+    // 2.  Try to solve the 1 to 7 problems in the problem solving sheet
+
+
+     //1. Create a function that takes two numbers as arguments and returns their sum.
+
+function add(a,b){
+    sum = a + b;
+    return sum;
+}
+add(10,20)
+console.log(sum)
+
+//2. Write a function that takes an integer minutes and converts it to seconds.
+function time(min){
+    sec = min*60
+    return sec
+}
+time(3)
+console.log(sec,"seconds")
+
+
+//3. Create a function that takes a number as an argument, increments the number by +1 and returns the result.
+
+function increment(num){
+ var res = num+1
+    return res
+}
+increment(5)
+console.log(res)
+
+//3. second way
+
+
+function increment(num){
+ var res = num+1
+    return res
+
+}
+console.log(increment(5))
+
+//3.third way
+
+function increment(num){
+
+return   num+1
+
+}
+console.log(increment(5))
+
+//4.Create a function that takes the age in years and returns the age in days.
+
+function age_days(age){
+  
+  leap = age/4
+  year = 365
+  return (age*year)+leap
+  }
+  
+  console.log(age_days(20))
+
+
+//5. Create a function that takes voltage and current and returns the calculated power.
+
+function current(v, i){
+    power = v*i;
+    return power
+}
+console.log(current(10,3))
+
+
+//6. Write a function that returns the string "something" joined with a space " " and the given argument a.
+
+function string(a){
+  return "something"+a;
+}
+console.log(string(" space"))
+
+
+//7. Create a function that takes two arguments. Both arguments are integers, a and b. Return true if one of them is 10 or if their sum is 10.
+
+function addition(a,b){
+    if(typeof(a)== "number" && typeof(b)== "number"){
+         if(a+b== 10 || a == 10 || b == 10){
+    console.log(true)
+}else {
+    console.log(false)
+}
+    }else{
+        console.log("not an integer")
+    }
+   
+}
+addition(5,"w")
+</script>
+    
+</body>
+</html>
